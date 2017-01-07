@@ -1,5 +1,6 @@
 package com.example.srinjoy10.contactsapp;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import java.util.*;
 /**
@@ -10,6 +11,7 @@ public class s extends AppCompatActivity {
     private static s instance = null;
     public ArrayList<String> name = new ArrayList<String>();
     public ArrayList<String> number = new ArrayList<String>();
+    public ArrayList<String> d=new ArrayList<String>();
     public ArrayList<ArrayList<String>> main = new ArrayList<ArrayList<String>>();
 
     protected s() {
@@ -33,5 +35,9 @@ public class s extends AppCompatActivity {
     public ArrayList<ArrayList<String>> getArrayList3()
     {
         return main;
+    }
+    public ArrayList<String> getArrayd()
+    {
+        return d;
     }
 }

@@ -41,6 +41,7 @@ public class MainActivity extends s{
 
         ArrayList<String> name=s.getInstance().getArrayList1();
         ArrayList<String> number=s.getInstance().getArrayList2();
+        ArrayList<String> d2=s.getInstance().getArrayd();
         //ArrayList<ArrayList<String>> m=s.getInstance().getArrayList3();
 
         int i = 0;int j=0;
@@ -51,7 +52,7 @@ public class MainActivity extends s{
                     LinearLayout ll = new LinearLayout(this);
 
                 Bundle extras = getIntent().getExtras();
-                String fileName = extras.getString("picname");
+                String fileName = d2.get(i);
                 File filePath = getFileStreamPath(fileName);
                 Drawable d = Drawable.createFromPath(filePath.toString());
 

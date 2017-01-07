@@ -1,5 +1,6 @@
 package com.example.srinjoy10.contactsapp;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import java.util.*;
@@ -66,6 +67,7 @@ public class addcontact extends s {
         String no = et2.getText().toString();
         ArrayList<String> name=s.getInstance().getArrayList1();
         ArrayList<String> number=s.getInstance().getArrayList2();
+        ArrayList<String> d2=s.getInstance().getArrayd();
         ArrayList<ArrayList<String>> main=s.getInstance().getArrayList3();
         ImageView iv = (ImageView) findViewById(R.id.imageView3);
         //iv.getDrawable();
@@ -89,7 +91,10 @@ public class addcontact extends s {
             name.add(string);
             Intent i = new Intent(this, MainActivity.class);
             number.add(no);
-            i.putExtra("picname",fileName);
+            //i.putExtra("picname",fileName);
+            d2.add(fileName);
+            //Drawable d = Drawable.createFromPath(fileName);
+           // d2.add(d);
             startActivity(i);
            main.add(name);
            main.add(number);
